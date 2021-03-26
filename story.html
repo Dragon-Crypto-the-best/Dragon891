@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<h1>        Dragon creation lab</h1>
+    <script>
+        function createStory() {
+            var name1 = document.getElementById("name1").value;
+            document.getElementById("name1Output").innerHTML = name1;
+            var dragon = document.getElementById("dragon").value;
+            document.getElementById("dragonOutput").innerHTML = dragon;
+            var dragonAge = document.getElementById("dragonAge").value;
+            document.getElementById("dragonAgeOutput").innerHTML = dragonAge;
+            var dragonGender = document.querySelector('input[name="dragonGender"]:checked').value;
+            document.getElementById("dragonGenderOutput").innerHTML = dragonGender;
+            var dragonType = document.querySelector('input[name="dragonType"]:checked').value;
+            document.getElementById("dragonTypeOutput").innerHTML = dragonType;
+        }
+            
+    </script>
+<!--
+    SELECT BOX
+    <label for="cars">Choose a car:</label>
+
+<select name="cars" id="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>-->
+<!-- TEXT AREA 
+    <textarea id="commentbox" name="commentbox" rows="15" cols="90">
+
+    </textarea>
+-->
+<!--Drop down menue?
+      <div class="form-group">
+        
+        <select id="activity" name="activity" multiple>
+          <option value="band">Band</option>
+          <option value="tennis">Tennis</option>
+          <option value="basketball">Basketball</option>
+          <option value="debate">Debate Club</option>
+        </select>
+    </div>
+-->
+
+</head>
+<body>
+    <style>
+        body {
+          background-image: url("https://wallpapercave.com/wp/eVwPRPt.jpg")
+        }
+      </style>
+    
+<form action="javascript:createStory();">
+
+    <div class="form-group">
+        <label for="name1">A Name</label>
+        <input type="text" class="form-control" id="name1" aria-describedby="nameHelp" placeholder="Enter a name">
+        <small id="nameHelp" class="form-text text-muted">Any name you want.</small>
+    </div>
+    <div class="form-group">
+        <label for="dragon">Put a dragon name</label>
+        <input type="text" class="form-control" id="dragon" placeholder="Enter a dragon name">
+    </div>
+    <div class="form-group">
+        <label for="dragonAge">Enter the dragon's age</label>
+        <input type="text" class="form-control" id="dragonAge" placeholder="Age has to be 1 - 2500">
+    </div>
+    <div label="radio" style ="color:whitesmoke ;">
+<h4>Dragon Gender</h4>
+    <input type="radio" id="male" name="dragonGender" value="male">
+    <label for="male">Male</label><br>
+
+    <input type="radio" id="female" name="dragonGender" value="female">
+    <label for="female">Female</label><br>
+ <hr>      
+ <h4>Dragon Type</h4>
+    <input type="radio" id="fire" name="dragonType" value="fire">
+    <label for="fire">Fire</label><br>
+    
+    <input type="radio" id="frost" name="dragonType" value="frost">
+    <label for="frost">Frost</label><br>
+    
+    <input type="radio" id="nature" name="dragonType" value="nature">
+    <label for="nature">Nature</label><br>
+    
+    <input type="radio" id="air" name="dragonType" value="air">
+    <label for="air">Air</label><br>
+ 
+    <input type="radio" id="terra" name="dragonType" value="terra">
+    <label for="terra">Terra</label><br>
+ 
+    <input type="radio" id="ice" name="dragonType" value="ice">
+    <label for="ice">Ice</label><br>
+ 
+    <input type="radio" id="light" name="dragonType" value="light">
+    <label for="light">Light</label><br>
+ 
+    <input type="radio" id="black" name="dragonType" value="black">
+    <label for="black">Black</label><br>
+ 
+    <input type="radio" id="dark" name="dragonType" value="dark">
+    <label for="dark">Dark</label><br>
+ 
+    <input type="radio" id="white" name="dragonType" value="white">
+    <label for="white">White</label><br>
+    
+    <input type="radio" id="elemental" name="dragonType" value="elemental">
+    <label for="elemental">Elemental</label><br>
+    
+    <input type="radio" id="fury" name="dragonType" value="fury">
+    <label for="fury">Fury</label><br>
+ 
+    
+    <br/>  <br/>
+</div>
+    <input type="submit" value="Submit my story" class="btn btn-success">
+    <button type="reset" value="Reset"  class="btn btn-warning">Clear Form</button>
+
+</form>
+
+<br /><br />
+<h4 style="color: whitesmoke;">My name is <span id="name1Output" style="color: whitesmoke;">_____</span> and I have a dragon named <span id="dragonOutput"style="color: whitesmoke;">_____</span>. It is <span
+    id="dragonAgeOutput" style="color: whitesmoke;">_____</span> years old.It is a <span id="dragonTypeOutput"style="color: whitesmoke;">_____</span> type. It is a <span id="dragonGenderOutput"style="color: whitesmoke;">_____</span>.  <span id="iLikeMusicSpan"></span><span id="myScheduleSpan"></span>
+</h4>
+<br/>
+<br/>
+<br/>
+    
+</body>
+</html>

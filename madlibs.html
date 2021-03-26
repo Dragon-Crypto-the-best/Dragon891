@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script>
+        function createStory() {
+            var name1 = document.getElementById("name1").value;
+            document.getElementById("name1Output").innerHTML = name1;
+            var subject = document.getElementById("subject").value;
+            document.getElementById("subjectOutput").innerHTML = subject;
+            var numberOfStudents = document.getElementById("numberOfStudents").value;
+            document.getElementById("numberOfStudentsOutput").innerHTML = numberOfStudents;
+         
+            var artSpecialIsChecked = document.getElementById("artSpecial").checked;
+            var musicSpecialIsChecked = document.getElementById("musicSpecial").checked;
+            var peSpecial = document.getElementById("peSpecial").checked;
+            var technologySpecial = document.getElementById("technologySpecial").checked;
+
+
+            if(artSpecialIsChecked) {
+                document.getElementById("artSpan").innerHTML = "art";                
+            } else if (!artSpecialIsChecked) {                
+                document.getElementById("artSpan").innerHTML = "";   
+            } 
+            
+            if(musicSpecialIsChecked) {
+                document.getElementById("musicSpan").innerHTML = "music";                
+            } else if (!musicSpecialIsChecked) {                
+                document.getElementById("musicSpan").innerHTML = "";   
+            } 
+
+
+
+            if(artSpecialIsChecked) {
+                document.getElementById("iLikeArtSpan").innerHTML = "Yes, I also like art! I want to be the next picasso!";                
+            } else if (!artSpecialIsChecked) {                
+                document.getElementById("iLikeArtSpan").innerHTML = "I wish you did art.";   
+            } 
+
+     
+            if(musicSpecialIsChecked) {
+                document.getElementById("iLikeMusicSpan").innerHTML = "Yes, I also like music! I want to be the next Mozart!";                
+            } else if (!artSpecialIsChecked) {                
+                document.getElementById("iLikeMusicSpan").innerHTML = "I wish you did music.";   
+            }             
+            
+
+            if (!artSpecialIsChecked && !musicSpecial && !peSpecial && !technologySpecial) {
+                //
+                document.getElementById("noSpecialsIsChecked").innerHTML = "Try a special next year!";                 
+            }
+
+            if (!artSpecialIsChecked && !musicSpecial && peSpecial && !technologySpecial) {
+                //
+                document.getElementById("myScheduleSpan").innerHTML = "This is exactly like my schedule!";                 
+            }            
+            
+        }
+    </script>
+
+</head>
+<form action="javascript:createStory();">
+
+    <div class="form-group">
+        <label for="name1">A Name</label>
+        <input type="text" class="form-control" id="name1" aria-describedby="nameHelp" placeholder="Enter a name">
+        <small id="nameHelp" class="form-text text-muted">Any name you want.</small>
+    </div>
+    <div class="form-group">
+        <label for="subject">School subject</label>
+        <input type="text" class="form-control" id="subject" placeholder="Enter a school subject">
+    </div>
+    <div class="form-group">
+        <label for="numberOfStudents">A number</label>
+        <input type="text" class="form-control" id="numberOfStudents" placeholder="Enter a number">
+    </div>
+
+    Specials
+    <div class="form-group">
+        <label for="artSpecial">Art</label>
+        <input type="checkbox" id="artSpecial">
+
+        <label for="musicSpecial">Music</label>
+        <input type="checkbox" id="musicSpecial">
+        
+        <label for="peSpecial">PE</label>
+        <input type="checkbox" id="peSpecial">   
+
+        <label for="technologySpecial">Technology</label>
+        <input type="checkbox" id="technologySpecial">        
+    </div>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    
+    <br/>  <br/>
+    
+    <input type="radio" id="elem" name="schoolLevel" value="other">
+    <label for="elem">Elementary School</label>  <br/>
+    <input type="radio" id="midddle" name="schoolLevel" value="other">
+    <label for="midddle">Middle School School</label>   <br/> 
+    <input type="radio" id="high" name="schoolLevel" value="other">
+    <label for="high">High School</label>    <br/>
+    <input type="radio" id="none" name="schoolLevel" value="other">
+    <label for="none">None of the Above</label>    <br/>
+  
+   <!-- 1) Checkbox
+    2) Radiobutton
+    3) Dropdown (Select menu)
+    4) Textarea-->
+
+    <input type="submit" value="Submit my story" class="btn btn-success">
+    <button type="reset" value="Reset"  class="btn btn-warning">Clear Form</button>
+
+</form>
+
+<br /><br />
+My name is <span id="name1Output">_____</span> and I teach <span id="subjectOutput">_____</span>. I have <span
+    id="numberOfStudentsOutput">_____</span> students in the class. <span id="iLikeArtSpan"></span> <span id="noSpecialsIsChecked"></span> <span id="iLikeMusicSpan"></span><span id="myScheduleSpan"></span>
+
+<br/>
+<br/>
+<br/>
+    Your specials are <span id="artSpan"></span> <span id="musicSpan"></span> <span id="peSpan"></span> <span id="technologySpan"></span>.
+</html>

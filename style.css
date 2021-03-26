@@ -1,0 +1,29 @@
+#Content1 {
+    color: white;
+    font-family:Lobster;
+}
+
+#Content3 {
+    color:red;
+    font-family:Lobster;
+}
+#Content4 {
+    color:red;
+    font-family:Lobster;
+}
+
+#Content2 img {
+    width:200px;
+    height:200px;
+    transition: height 6s, width 6s;
+    
+} 
+#Content2 img:hover{
+    width:607px;
+    height:607px;
+}
+
+#CAROUSEL img {
+    width:580px;
+    height:530px;
+}
